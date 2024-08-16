@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bd:
+    image: mongo:5
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_DATABASE: nest-api-global
+    volumes:
+      - ./mongo:/data/db

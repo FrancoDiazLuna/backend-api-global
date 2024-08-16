@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  api-global:
+    # depends_on:
+    #   - db
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: backend-api-docker
+    container_name: api-global
+    restart: always # reiniciar el contenedor si se detiene
+    ports:
+      - '${APP_PORT}:${APP_PORT}'
+    # working_dir: /var/www/api-user
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
+      MONGODB: ${MONGODB}
+      APP_PREFIX: ${APP_PREFIX}
+      APP_VERSION: ${APP_VERSION}
+      CORS_ORIGINS: ${CORS_ORIGINS}
+      CORS_METHODS: ${CORS_METHODS}
+    # volumes:
+    #   - ./:/var/www/api-user
+
+  # db:
+  #   image: mongo:5
+  #   container_name: mongo-user
+  #   restart: always
+  #   ports:
+  #     - 27017:27017
+  #   environment:
+  #     MONGODB_DATABASE: nest-api-global
+  # volumes:
+  #   - ./mongo:/data/db
