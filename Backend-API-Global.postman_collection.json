@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "b01cd382-d2b5-4fbb-be04-60810d2e3278",
+		"name": "Backend-API-Global",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20156153"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/users/c5935a3f-b717-401d-86fd-952d8ef2d502",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"users",
+								"c5935a3f-b717-401d-86fd-952d8ef2d502"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Emma\",\r\n    \"correoElectronico\": \"emma@gmail.com\",\r\n    \"edad\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"edad\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/users/c1d1212f-046f-41c3-b66e-87b2f992020f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"users",
+								"c1d1212f-046f-41c3-b66e-87b2f992020f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/users/6746833e-4d82-4c63-a6c5-15bd33e75a6a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"users",
+								"6746833e-4d82-4c63-a6c5-15bd33e75a6a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/api/seed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
